@@ -1,0 +1,102 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f7f9fc;
+  padding: 1rem;
+
+  .card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    max-width: 500px;
+    width: 100%;
+
+    h2 {
+      margin: 0;
+      font-size: 1.2rem;
+      color: #333;
+    }
+    .loginTitle {
+      text-align: left;
+      font-weight: bold;
+      font-size: 1rem;
+      padding: 10px 0px 20px;
+      color: #0066cc;
+    }
+
+    form {
+      .inputGroup {
+        margin-bottom: 1rem;
+
+        label {
+          display: block;
+          font-size: 0.9rem;
+          color: #333;
+          margin-bottom: 0.5rem;
+        }
+
+        input {
+          width: 100%;
+          padding: 0.75rem;
+          font-size: 0.9rem;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          background-color: white;
+
+          &:focus {
+            border-color: #0066cc;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.2);
+          }
+        }
+
+        .resetLink {
+          display: inline-block;
+          margin-top: 0.5rem;
+          font-size: 0.8rem;
+          color: #0066cc;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .loginButton {
+        width: 100%;
+        padding: 0.75rem;
+        font-size: 1rem;
+        font-weight: bold;
+        color: #fff;
+        background-color: #0066cc;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #005bb5;
+        }
+
+        &:focus {
+          outline: none;
+          box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.2);
+        }
+      }
+    }
+  }
+
+  .notification {
+    margin-top: 1rem;
+    background: #e6ffe6;
+    color: #006600;
+    padding: 0.5rem 1rem;
+    border: 1px solid #00cc00;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+}

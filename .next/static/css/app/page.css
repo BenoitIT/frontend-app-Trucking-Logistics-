@@ -1,0 +1,91 @@
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[7].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[7].use[5]!./src/app/(styles)/login.module.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.login_container__gFUN6 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f7f9fc;
+  padding: 1rem;
+}
+.login_container__gFUN6 .login_card__8FFQ7 {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 500px;
+  width: 100%;
+}
+.login_container__gFUN6 .login_card__8FFQ7 h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+.login_container__gFUN6 .login_card__8FFQ7 .login_loginTitle__rKZCk {
+  text-align: left;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 10px 0px 20px;
+  color: #0066cc;
+}
+.login_container__gFUN6 .login_card__8FFQ7 form .login_inputGroup__Ye_VM {
+  margin-bottom: 1rem;
+}
+.login_container__gFUN6 .login_card__8FFQ7 form .login_inputGroup__Ye_VM label {
+  display: block;
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+.login_container__gFUN6 .login_card__8FFQ7 form .login_inputGroup__Ye_VM input {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+}
+.login_container__gFUN6 .login_card__8FFQ7 form .login_inputGroup__Ye_VM input:focus {
+  border-color: #0066cc;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.2);
+}
+.login_container__gFUN6 .login_card__8FFQ7 form .login_inputGroup__Ye_VM .login_resetLink__WfoiX {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: #0066cc;
+  text-decoration: none;
+}
+.login_container__gFUN6 .login_card__8FFQ7 form .login_inputGroup__Ye_VM .login_resetLink__WfoiX:hover {
+  text-decoration: underline;
+}
+.login_container__gFUN6 .login_card__8FFQ7 form .login_loginButton__h62vQ {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #0066cc;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.login_container__gFUN6 .login_card__8FFQ7 form .login_loginButton__h62vQ:hover {
+  background-color: #005bb5;
+}
+.login_container__gFUN6 .login_card__8FFQ7 form .login_loginButton__h62vQ:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.2);
+}
+.login_container__gFUN6 .login_notification__8iyKV {
+  margin-top: 1rem;
+  background: #e6ffe6;
+  color: #006600;
+  padding: 0.5rem 1rem;
+  border: 1px solid #00cc00;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
