@@ -1,0 +1,22 @@
+import { AdminPanelHeaderContext } from "../(context)/dashboardTitleheaders";
+import styles from "../(styles)/header.module.scss";
+import { useContext } from "react";
+export interface headerContext {
+  title?: string;
+  setTitle?: (value: string) => void;
+}
+export default function Header() {
+  const { title } = useContext<any>(AdminPanelHeaderContext);
+  return (
+    <div className={styles.header}>
+      <h1>{title}</h1>
+      <div className={styles.userSection}>
+        <span className={styles.icons}>
+          <button>🔔</button>
+          <p>John doe</p>
+        </span>
+        <div className={styles.profile}>👤</div>
+      </div>
+    </div>
+  );
+}
