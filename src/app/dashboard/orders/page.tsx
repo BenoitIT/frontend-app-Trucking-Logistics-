@@ -1,11 +1,15 @@
-"use client"
-import { useEffect,useContext } from "react";
-import { AdminPanelHeaderContext } from "@/app/(context)/dashboardTitleheaders";
+"use server"
+
+import { ordersTableHeaders } from "@/app/(components)/tableheaders/orders";
+import Orders from "@/app/(pages)/orders";
+
 const Page = () => {
-  const { setTitle } = useContext<any>(AdminPanelHeaderContext);
-  useEffect(() => {
-    setTitle("Orders");
-  }, []);
-  return <div>orders..</div>;
+  return (
+    <Orders
+      dataSourceEndpoint="api url"
+      headers={ordersTableHeaders}
+      showTimerRangeFilters={true}
+    />
+  );
 };
 export default Page;

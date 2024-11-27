@@ -13,7 +13,10 @@ export default function Header() {
       <div className={styles.userSection}>
         <span className={styles.icons}>
           <button>🔔</button>
-          <p>John doe</p>
+          <p>
+            <span>John doe</span>
+            <span className={styles.email}>John@gmail.com</span>
+          </p>
         </span>
         <div className={styles.profile}>👤</div>
       </div>

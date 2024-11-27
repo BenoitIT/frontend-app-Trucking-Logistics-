@@ -1,0 +1,19 @@
+.container {
+  margin-top: 30px;
+  .activities {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 5px 20px 5px;
+    flex-wrap: wrap;
+    .rightActions {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      gap: 20px;
+      .hide {
+        display: none;
+      }
+    }
+  }
+}

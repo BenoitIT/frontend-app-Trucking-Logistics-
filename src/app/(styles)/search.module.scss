@@ -1,0 +1,33 @@
+.search {
+  width: fit-content;
+  position: relative;
+  display: flex;
+  background-color: #023363;
+  border-radius: 5px 0 0 5px;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #023363;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9dbfaf;
+}
+
+.searchTerm:focus {
+  color: #0e58a1;
+}
+
+.searchButton {
+  width: fit-content;
+  height: 36px;
+  border: 1px solid #023363;
+  background: #023363;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  font-size: 14px;
+}

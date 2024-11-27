@@ -3,50 +3,35 @@ import Card from "../(components)/Card";
 import styles from "../(styles)/dashboard.module.scss";
 import { useEffect, useContext } from "react";
 import { AdminPanelHeaderContext } from "../(context)/dashboardTitleheaders";
+import OrdersDistribution from "../(components)/ordersChart";
+import { data } from "../(dummydata)/orderchat";
+import { cardData } from "../(dummydata)/dashboardCard";
+import Table from "../(components)/table";
+import { recentOdersHeaders } from "../(components)/tableheaders/recentOrders";
+import { recentOrders } from "../(dummydata)/recentOrder";
+
 export default function Dashboard() {
-  const data = [
-    {
-      title: "Trucks",
-      value: "12",
-      growth: "",
-      details: ["perfectly operating"],
-    },
-    {
-      title: "Drives",
-      value: "23",
-      growth: "",
-      details: ["active drivers"],
-    },
-    {
-      title: "Total orders",
-      value: "12",
-      growth: "",
-      details: ["since the beginning"],
-    },
-    {
-      title: "Monthly orders",
-      value: "16",
-      growth: "14%",
-      details: ["processed this month"],
-    },
-  ];
   const { setTitle } = useContext<any>(AdminPanelHeaderContext);
   useEffect(() => {
     setTitle("Home");
   }, []);
   return (
-    <div className={styles.dashboard}>
-      {data.map((card, index) => (
-        <Card key={index} {...card} />
-      ))}
+    <>
+      <div className={styles.dashboard}>
+        {cardData.map((card, index) => (
+          <Card key={index} {...card} />
+        ))}
+      </div>
       <div className={styles.stastics}>
-        <div>
-          ok
+        <div className={styles.chart}>
+          <p>Order Distribution by Month - 2024</p>
+          <OrdersDistribution data={data} />
         </div>
-        <div>
-          Hi
+        <div className={styles.recentOrders}>
+          <p>Most recent orders</p>
+          <Table headers={recentOdersHeaders} data={recentOrders} />
         </div>
       </div>
-    </div>
+    </>
   );
 }

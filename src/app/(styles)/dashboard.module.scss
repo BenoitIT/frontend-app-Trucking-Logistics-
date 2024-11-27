@@ -3,9 +3,39 @@
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
   padding: 20px;
-  .stastics {
-    display: flex;
-    width: 100%;
-    gap: 6px;
+  width: 100%;
+}
+.stastics {
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
+  gap: 6px;
+  padding: 20px;
+  .chart {
+    width: 60%;
+    height: 600px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    p {
+      padding: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+  .recentOrders {
+    width: 40%;
+    max-height: 380px;
+    min-height: fit-content;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    p {
+      padding: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
   }
 }

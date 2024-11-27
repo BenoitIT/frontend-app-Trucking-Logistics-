@@ -1,0 +1,31 @@
+.table {
+  width: 100%;
+  thead {
+    border-top: 2px solid #023363;
+    border-bottom: 2px solid #023363;
+    th {
+      text-transform:capitalize;
+      text-align: left;
+      padding: 10px;
+      color: #023363;
+      border: 1px solid #f1f1f1;
+    }
+  }
+  tbody {
+    tr {
+      border-bottom: 1px solid #f1f1f1;
+      color: #75787b;
+      td {
+        padding: 10px;
+        border: 1px solid #f1f1f1;
+      }
+      th {
+        padding-left: 10px;
+        border: 1px solid #f1f1f1;
+      }
+    }
+    .hide{
+        display: none;
+    }
+  }
+}

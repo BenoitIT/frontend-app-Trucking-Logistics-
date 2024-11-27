@@ -1,12 +1,9 @@
-"use client";
-import { AdminPanelHeaderContext } from "@/app/(context)/dashboardTitleheaders";
-import { useContext, useEffect } from "react";
+"use server";
+
+import { driversTableHeaders } from "@/app/(components)/tableheaders/drivers";
+import Drivers from "@/app/(pages)/drivers";
 
 const Page = () => {
-  const { setTitle } = useContext<any>(AdminPanelHeaderContext);
-  useEffect(() => {
-    setTitle("Drivers");
-  }, []);
-  return <div>drivers...</div>;
+  return <Drivers dataSourceEndpoint="api url" headers={driversTableHeaders} />;
 };
 export default Page;
