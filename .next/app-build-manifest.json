@@ -12,17 +12,11 @@
       "static/css/app/dashboard/layout.css",
       "static/chunks/app/dashboard/layout.js"
     ],
-    "/dashboard/page": [
+    "/dashboard/drivers/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/dashboard/page.css",
-      "static/chunks/app/dashboard/page.js"
-    ],
-    "/dashboard/orders/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/dashboard/orders/page.css",
-      "static/chunks/app/dashboard/orders/page.js"
+      "static/css/app/dashboard/drivers/page.css",
+      "static/chunks/app/dashboard/drivers/page.js"
     ],
     "/dashboard/trucks/page": [
       "static/chunks/webpack.js",
@@ -30,11 +24,35 @@
       "static/css/app/dashboard/trucks/page.css",
       "static/chunks/app/dashboard/trucks/page.js"
     ],
-    "/dashboard/drivers/page": [
+    "/dashboard/orders/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/dashboard/drivers/page.css",
-      "static/chunks/app/dashboard/drivers/page.js"
+      "static/css/app/dashboard/orders/page.css",
+      "static/chunks/app/dashboard/orders/page.js"
+    ],
+    "/dashboard/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/dashboard/page.css",
+      "static/chunks/app/dashboard/page.js"
+    ],
+    "/dashboard/drivers/new/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/dashboard/drivers/new/page.css",
+      "static/chunks/app/dashboard/drivers/new/page.js"
+    ],
+    "/dashboard/trucks/new/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/dashboard/trucks/new/page.css",
+      "static/chunks/app/dashboard/trucks/new/page.js"
+    ],
+    "/dashboard/orders/new/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/dashboard/orders/new/page.css",
+      "static/chunks/app/dashboard/orders/new/page.js"
     ]
   }
 }

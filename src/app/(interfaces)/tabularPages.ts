@@ -5,6 +5,7 @@ export interface TabularPageProps {
       field: string;
       hidden?: boolean;
     }[];
+    addnewroute?:string;
     action?: {
       icon: React.ReactNode | JSX.Element;
       Click: (id: number) => Promise<any>;
