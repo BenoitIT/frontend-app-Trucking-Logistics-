@@ -4,12 +4,14 @@
     border-top: 2px solid #023363;
     border-bottom: 2px solid #023363;
     th {
-      text-transform:capitalize;
+      text-transform: capitalize;
       text-align: left;
       padding: 10px;
       color: #023363;
       border: 1px solid #f1f1f1;
-      font-size: 14px;
+      @media (max-width: 768px) {
+        font-size: 13px;
+      }
     }
   }
   tbody {
@@ -19,16 +21,20 @@
       td {
         padding: 10px;
         border: 1px solid #f1f1f1;
-        font-size: 13px;
+        @media (max-width: 768px) {
+          font-size: 12px;
+        }
       }
       th {
         padding-left: 10px;
         border: 1px solid #f1f1f1;
-        font-size: 13px;
+        @media (max-width: 768px) {
+          font-size: 12px;
+        }
       }
     }
-    .hide{
-        display: none;
+    .hide {
+      display: none;
     }
   }
 }

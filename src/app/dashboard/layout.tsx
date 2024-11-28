@@ -11,15 +11,16 @@ export default function Layout({
   children: React.ReactNode;
 }>) {
   const [title, setTitle] = useState("Home");
+  const [showSidebar,setShowSideBar]=useState(false);
   return (
     <div className={styles.container}>
-      <Sidebar />
-      <div className={styles.content}>
-        <AdminPanelHeaderContext.Provider value={{ title: title, setTitle }}>
+      <AdminPanelHeaderContext.Provider value={{ title: title, setTitle,showSidebar:showSidebar,setShowSideBar }}>
+        <Sidebar />
+        <div className={styles.content}>
           <Header />
           <div>{children}</div>
-        </AdminPanelHeaderContext.Provider>
-      </div>
+        </div>
+      </AdminPanelHeaderContext.Provider>
     </div>
   );
 }
