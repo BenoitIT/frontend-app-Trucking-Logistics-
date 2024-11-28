@@ -1,9 +1,0 @@
-{
-  "/dashboard/drivers/page": "app/dashboard/drivers/page.js",
-  "/dashboard/page": "app/dashboard/page.js",
-  "/dashboard/trucks/page": "app/dashboard/trucks/page.js",
-  "/dashboard/drivers/new/page": "app/dashboard/drivers/new/page.js",
-  "/dashboard/orders/page": "app/dashboard/orders/page.js",
-  "/dashboard/trucks/new/page": "app/dashboard/trucks/new/page.js",
-  "/dashboard/orders/new/page": "app/dashboard/orders/new/page.js"
-}
