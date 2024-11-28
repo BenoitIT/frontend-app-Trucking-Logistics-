@@ -1,4 +1,4 @@
-"use server"
+"use server";
 
 import { ordersTableHeaders } from "@/app/(components)/tableheaders/orders";
 import Orders from "@/app/(pages)/orders";
@@ -9,6 +9,7 @@ const Page = () => {
       dataSourceEndpoint="api url"
       headers={ordersTableHeaders}
       showTimerRangeFilters={true}
+      addnewroute="new"
     />
   );
 };
