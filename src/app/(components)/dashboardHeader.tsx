@@ -6,7 +6,7 @@ export interface headerContext {
   setTitle?: (value: string) => void;
 }
 export default function Header() {
-  const { title } = useContext<any>(AdminPanelHeaderContext);
+  const { title, setShowSideBar } = useContext<any>(AdminPanelHeaderContext);
   return (
     <div className={styles.header}>
       <h1>{title}</h1>
@@ -19,6 +19,9 @@ export default function Header() {
           </p>
         </span>
         <div className={styles.profile}>👤</div>
+        <div className={styles.menu} onClick={() => setShowSideBar(true)}>
+          🗒️
+        </div>
       </div>
     </div>
   );
