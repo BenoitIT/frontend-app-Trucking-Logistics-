@@ -25,14 +25,14 @@ const DynamicTable = <T extends Record<string, string | number>>({
             <tr key={rowIndex}>
               <td>{rowIndex + 1}</td>
               {headers.map((header, colIndex) => (
-                <td key={colIndex}>{row[header.field] as string | number}</td>
+                <td key={colIndex}>{row[header.field] as string | number??"-"}</td>
               ))}
               <td
                 className={
                   action?.length && action?.length > 0 ? "" : style.hide
                 }
               >
-                <div>
+                <div className={style.actions}>
                   {action
                     ? action.map((action, index) => (
                         <span

@@ -24,6 +24,11 @@
         @media (max-width: 768px) {
           font-size: 12px;
         }
+        .actions{
+          display: flex;
+          gap:10px;
+          cursor: pointer;
+        }
       }
       th {
         padding-left: 10px;

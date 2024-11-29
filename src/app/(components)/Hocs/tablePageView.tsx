@@ -6,6 +6,8 @@ import { Button } from "../button";
 import { Search } from "../searchbox";
 import { Filters } from "../radioBoxFilter";
 import { useRouter, usePathname } from "next/navigation";
+import { useQuery } from "@tanstack/react-query";
+import { getRecordFromDb } from "@/utils/getData";
 export const TabularPageView = (Component: React.FC) => {
   const ModifiedComponent = (props: TabularPageProps) => {
     const router = useRouter();
@@ -16,7 +18,12 @@ export const TabularPageView = (Component: React.FC) => {
       action,
       showTimerRangeFilters,
       addnewroute,
+      dataFetchingQueryKey,
     } = props;
+    const { data } = useQuery({
+      queryKey: [dataFetchingQueryKey],
+      queryFn: async () => await getRecordFromDb(dataSourceEndpoint),
+    });
     return (
       <div className={style.container}>
         <Component />
@@ -32,7 +39,9 @@ export const TabularPageView = (Component: React.FC) => {
             />
           </div>
         </div>
-        <Table headers={headers} data={[]} action={action} />
+        {Array.isArray(data) && (
+          <Table headers={headers} data={data} action={action} />
+        )}
       </div>
     );
   };
