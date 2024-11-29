@@ -66,5 +66,12 @@
       "assigned_driver": "Ben Elia",
       "order_status": "Pending"
     }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "email": "benoitnda35@gmail.com",
+      "password": "passs"
+    }
   ]
 }

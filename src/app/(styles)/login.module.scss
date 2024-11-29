@@ -93,9 +93,18 @@
   .notification {
     margin-top: 1rem;
     background: #e6ffe6;
-    color: #006600;
+    color: #320ea8;
     padding: 0.5rem 1rem;
-    border: 1px solid #00cc00;
+    border: 1px solid #320ea8;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+  .notificationfail {
+    margin-top: 1rem;
+    background: #e6ffe6;
+    color: #c71d29;
+    padding: 0.5rem 1rem;
+    border: 1px solid #c71d29;
     border-radius: 4px;
     font-size: 0.9rem;
   }
