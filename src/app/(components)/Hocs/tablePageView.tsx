@@ -8,6 +8,7 @@ import { Filters } from "../radioBoxFilter";
 import { useRouter, usePathname } from "next/navigation";
 import { useQuery } from "@tanstack/react-query";
 import { getRecordFromDb } from "@/utils/getData";
+import ErrorSection from "../errorSection";
 export const TabularPageView = (Component: React.FC) => {
   const ModifiedComponent = (props: TabularPageProps) => {
     const router = useRouter();
@@ -20,30 +21,36 @@ export const TabularPageView = (Component: React.FC) => {
       addnewroute,
       dataFetchingQueryKey,
     } = props;
-    const { data } = useQuery({
+    const { data, isLoading} = useQuery({
       queryKey: [dataFetchingQueryKey],
       queryFn: async () => await getRecordFromDb(dataSourceEndpoint),
     });
-    return (
-      <div className={style.container}>
-        <Component />
-        <div className={style.activities}>
-          <Search />
-          <div className={style.rightActions}>
-            <div className={showTimerRangeFilters ? "" : style.hide}>
-              <Filters />
+    if (data) {
+      return (
+        <div className={style.container}>
+          <Component />
+          <div className={style.activities}>
+            <Search />
+            <div className={style.rightActions}>
+              <div className={showTimerRangeFilters ? "" : style.hide}>
+                <Filters />
+              </div>
+              <Button
+                label="Add New"
+                OnClick={() => router.push(`${currentPath}/${addnewroute}`)}
+              />
             </div>
-            <Button
-              label="Add New"
-              OnClick={() => router.push(`${currentPath}/${addnewroute}`)}
-            />
           </div>
+          {Array.isArray(data) && (
+            <Table headers={headers} data={data} action={action} />
+          )}
         </div>
-        {Array.isArray(data) && (
-          <Table headers={headers} data={data} action={action} />
-        )}
-      </div>
-    );
+      );
+    } else if (isLoading) {
+      return <div className={style.loading}>Loading records....</div>;
+    } else {
+      return <ErrorSection />;
+    }
   };
   return ModifiedComponent;
 };

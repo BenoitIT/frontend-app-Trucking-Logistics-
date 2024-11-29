@@ -1,0 +1,35 @@
+.errorSection {
+    display: flex;
+    align-items: center;
+    gap: 1rem; 
+    min-height: 85vh; 
+    justify-content: center;
+  
+    .errorContainer {
+      background-color: #ffffff; 
+      padding: 1.5rem 1.5rem; 
+      border-radius: 0.25rem; 
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); 
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem; 
+      justify-content: center;
+      align-items: center;
+  
+      .errorIcon {
+        color: #dc2626; 
+        font-size: 3rem; 
+      }
+  
+      .errorMessage {
+        color: #dc2626; 
+        font-size: 0.875rem; 
+        @media (min-width: 768px) {
+          font-size: 1rem; 
+        }
+        display: flex;
+        flex-shrink: 0; 
+      }
+    }
+  }
+  
