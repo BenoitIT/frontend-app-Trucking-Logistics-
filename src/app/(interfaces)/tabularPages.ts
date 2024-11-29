@@ -1,5 +1,6 @@
 export interface TabularPageProps {
-    dataSourceEndpoint?: string;
+    dataSourceEndpoint: string;
+    dataFetchingQueryKey?:string;
     headers: {
       header: string;
       field: string;

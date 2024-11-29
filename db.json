@@ -1,0 +1,77 @@
+{
+  "trucks": [
+    {
+      "id": "1",
+      "plate_number": "RAC123",
+      "capacity": "20",
+      "status": "Delivering"
+    },
+    {
+      "id": "2",
+      "plate_number": "RAH789",
+      "capacity": 20,
+      "status": "Delivering"
+    },
+    {
+      "id": "424",
+      "plate_number": "RAC2356",
+      "status": "available",
+      "capacity": "20"
+    },
+    {
+      "id": "523",
+      "plate_number": "RAC355",
+      "status": "available",
+      "capacity": "40"
+    }
+  ],
+  "drivers": [
+    {
+      "id": "1",
+      "name": "Emmanuel",
+      "license_number": "LIC0014566",
+      "assigned_truck": "RAH789",
+      "contact_number": "0784567897"
+    },
+    {
+      "id": "2",
+      "name": "Karangwa",
+      "license_number": "LIC002",
+      "assigned_truck": "RAC123",
+      "contact_number": "0787654320"
+    },
+    {
+      "id": "184",
+      "name": "Ben Elia",
+      "license_number": "078464756",
+      "assigned_truck": "RAC2356",
+      "contact_number": "RAC355"
+    }
+  ],
+  "orders": [
+    {
+      "id": "2",
+      "date": "Fri Nov 29 2024",
+      "customer_name": "Musoni",
+      "assigned_truck": null,
+      "assigned_driver": null,
+      "order_status": "Pending"
+    },
+    {
+      "id": "119",
+      "date": "Fri Nov 29 2024",
+      "customer_name": "Bagaboo",
+      "assigned_truck": "Truck two",
+      "assigned_driver": "kagaboo",
+      "order_status": "Pending"
+    },
+    {
+      "id": "996",
+      "date": "Fri Nov 29 2024",
+      "customer_name": "Bolingo",
+      "assigned_truck": "RAC2356",
+      "assigned_driver": "Ben Elia",
+      "order_status": "Pending"
+    }
+  ]
+}
