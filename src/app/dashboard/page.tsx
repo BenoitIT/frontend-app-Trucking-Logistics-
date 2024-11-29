@@ -9,6 +9,7 @@ import Table from "../(components)/table";
 import { recentOdersHeaders } from "../(components)/tableheaders/recentOrders";
 import { useQuery } from "@tanstack/react-query";
 import { getRecordFromDb } from "@/utils/getData";
+import ErrorSection from "../(components)/errorSection";
 
 export default function Dashboard() {
   const { setTitle } = useContext<any>(AdminPanelHeaderContext);
@@ -25,7 +26,7 @@ export default function Dashboard() {
     queryFn: async () =>
       await getRecordFromDb(`${process.env.NEXT_PUBLIC_API_URL!}/trucks`),
   });
-  const { data: orders } = useQuery({
+  const { data: orders, isLoading } = useQuery({
     queryKey: [`orders`],
     queryFn: async () =>
       await getRecordFromDb(`${process.env.NEXT_PUBLIC_API_URL!}/orders`),
@@ -62,7 +63,14 @@ export default function Dashboard() {
         </div>
         <div className={styles.recentOrders}>
           <p>Most recent orders</p>
-          <Table headers={recentOdersHeaders} data={orders?.slice(0,4)} />
+
+          {orders ? (
+            <Table headers={recentOdersHeaders} data={orders?.slice(0, 4)} />
+          ) : isLoading ? (
+            <p>....</p>
+          ) : (
+            <ErrorSection />
+          )}
         </div>
       </div>
     </>
