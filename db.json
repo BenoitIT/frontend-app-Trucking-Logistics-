@@ -39,13 +39,6 @@
       "license_number": "LIC002",
       "assigned_truck": "RAC123",
       "contact_number": "0787654320"
-    },
-    {
-      "id": "184",
-      "name": "Ben Elia",
-      "license_number": "078464756",
-      "assigned_truck": "RAC2356",
-      "contact_number": "RAC355"
     }
   ],
   "orders": [
