@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Trucking Logistics Management System
 
-## Getting Started
+## Overview
 
-First, run the development server:
+This project simulates a **Trucking Logistics Management System** designed to manage the interaction between truck owners, drivers, and customers. The application is built using **Next.js** and features **NextAuth** for user authentication via Google OAuth 2.0. It fetches data from a simulated backend powered by **JSON Server** and leverages **React Query** for efficient data handling.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The goal is to provide a user-friendly and responsive single-page application where users can manage trucks, drivers, and orders effectively.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### **User Authentication**
 
-## Learn More
+- Google OAuth 2.0 integration and credentials (email and password) using **NextAuth**.
+- Personalized dashboard after login.
 
-To learn more about Next.js, take a look at the following resources:
+### **Dashboard**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Displays a summary of trucks, drivers, and active orders.
+- Includes the user's name and email.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### **Truck Management**
 
-## Deploy on Vercel
+- List trucks with details:
+  - Truck ID, Plate Number, Capacity, and Status (Available, Delivering, Maintenance).
+- Add, edit, or remove trucks.
+- Update truck status dynamically (e.g., Available → Delivering).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### **Driver Management**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- List drivers with details:
+  - Driver Name, License Number, Assigned Truck, and Contact Number.
+- Add, edit, or remove drivers.
+- Assign a driver to a specific truck.
+
+### **Order Management**
+
+- List orders with details:
+  - Order ID, Customer Name, Truck Assigned, Driver Assigned, and Order Status (Pending, In Progress, Completed).
+- Add, edit, or view orders.
+- Assign drivers to orders and update truck status accordingly.
+- Complete orders and reset truck/driver availability.
+- **Constraints:**
+  - Drivers and trucks currently delivering cannot be reassigned to new orders.
+
+### **API Integration**
+
+- Fetch data using **React Query** from **JSON Server** REST APIs.
+- Perform CRUD operations for trucks, drivers, and orders.
+
+### **Error Handling**
+
+- Reusable popup for displaying success and error messages.
+- Graceful handling of failed API requests.
+
+### **Prerequisites**
+
+- Node.js (v16 or higher).
+- A Google Cloud Console project with OAuth credentials for Google Login.
+
+### **Installation**
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/BenoitIT/frontend-app-Trucking-Logistics-.git
+   cd trucking-logistics-management-system
+   ```
+2. Install dependencies:
+   npm install
+3. Set up the .env file:
+   NEXT_PUBLIC_API_URL=<json-server-api-base-url>  
+   GOOGLE_CLIENT_ID=<your-google-client-id>  
+   GOOGLE_CLIENT_SECRET=<your-google-client-secret>  
+   NEXTAUTH_SECRET=<your-next-auth-secret>  
+   NEXTAUTH_URL=<your-app-url>
+4. Run both json-server and next js server
+   npm run dev
+5. you can even build the app
+   npm run build

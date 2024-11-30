@@ -4,6 +4,7 @@ $text-dark: #333;
 $text-light: #666;
 .showsidebar {
   width: 240px;
+  position: relative;
   background-color: $secondary-color;
   height: 100vh;
   padding: 20px;
@@ -55,9 +56,22 @@ $text-light: #666;
       width: 90%;
     }
   }
+  .logout {
+    position: absolute;
+    bottom: 100px;
+    li {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      .icon {
+        margin-right: 10px;
+      }
+    }
+  }
 }
 .sidebar {
   width: 240px;
+  position: relative;
   background-color: $secondary-color;
   height: 100vh;
   padding: 20px;
@@ -105,6 +119,18 @@ $text-light: #666;
       border-radius: 6px;
       color: white;
       width: 90%;
+    }
+  }
+  .logout {
+    position: absolute;
+    bottom: 100px;
+    li {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      .icon {
+        margin-right: 10px;
+      }
     }
   }
 }

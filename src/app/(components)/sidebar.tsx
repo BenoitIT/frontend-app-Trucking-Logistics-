@@ -4,18 +4,16 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useContext } from "react";
 import { AdminPanelHeaderContext } from "../(context)/dashboardTitleheaders";
+import { signOut } from "next-auth/react";
+import { menuItems } from "./paths";
 export default function Sidebar() {
   const currentPath = usePathname();
   const { showSidebar, setShowSideBar } = useContext<any>(
     AdminPanelHeaderContext
   );
-  const menuItems = [
-    { icon: "🛄", label: "Home", uri: "/dashboard" },
-    { icon: "📥", label: "Orders", uri: "/dashboard/orders" },
-    { icon: "🚚", label: "Trucks", uri: "/dashboard/trucks" },
-    { icon: "🧑‍🧑‍🧒", label: "Drivers", uri: "/dashboard/drivers" },
-  ];
-
+  const handleLogout = async () => {
+    await signOut({ redirect: false });
+  };
   return (
     <div className={!showSidebar ? styles.sidebar : styles.showsidebar}>
       <div className={styles.logo}>
@@ -36,6 +34,12 @@ export default function Sidebar() {
             </Link>
           </li>
         ))}
+      </ul>
+      <ul className={styles.logout}>
+        <li onClick={handleLogout}>
+          <span>⬅️</span>
+          <span>Logout</span>
+        </li>
       </ul>
     </div>
   );

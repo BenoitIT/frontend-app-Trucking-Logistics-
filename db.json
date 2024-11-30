@@ -70,6 +70,7 @@
   "users": [
     {
       "id": 1,
+      "name":"Benn dev",
       "email": "benoitnda35@gmail.com",
       "password": "passs"
     }
