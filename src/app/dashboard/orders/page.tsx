@@ -4,11 +4,13 @@ import { ordersTableHeaders } from "@/app/(components)/tableheaders/orders";
 import Orders from "@/app/(pages)/orders";
 import { deleteData } from "@/utils/deleteData";
 import { useMutation } from "@tanstack/react-query";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 const Page = () => {
   const currentPath = usePathname();
   const router = useRouter();
+  const searchParams: any = useSearchParams();
+  const searchValue = searchParams?.get("search");
   const { mutate } = useMutation({
     mutationFn: deleteData,
     onSuccess: () => {
@@ -43,7 +45,7 @@ const Page = () => {
   ];
   return (
     <Orders
-      dataSourceEndpoint={`${process.env.NEXT_PUBLIC_API_URL!}/orders`}
+      dataSourceEndpoint={`${process.env.NEXT_PUBLIC_API_URL!}/orders?customer_name=${searchValue||""}`}
       dataFetchingQueryKey="orders"
       headers={ordersTableHeaders}
       showTimerRangeFilters={true}
