@@ -64,7 +64,7 @@ The goal is to provide a user-friendly and responsive single-page application wh
 1. Clone the repository:
    ```bash
    git clone https://github.com/BenoitIT/frontend-app-Trucking-Logistics-.git
-   cd trucking-logistics-management-system
+   cd frontend-app-Trucking-Logistics-
    ```
 2. Install dependencies:
    npm install
