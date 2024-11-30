@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project simulates a **Trucking Logistics Management System** designed to manage the interaction between truck owners, drivers, and customers. The application is built using **Next.js** and features **NextAuth** for user authentication via Google OAuth 2.0. It fetches data from a simulated backend powered by **JSON Server** and leverages **React Query** for efficient data handling.
+This project simulates a **Trucking Logistics Management System** designed to manage the truck , drivers, and orders . The application is built using **Next.js** and features **NextAuth** for user authentication via Google OAuth 2.0. It fetches data from a simulated backend powered by **JSON Server** and leverages **React Query** for efficient data handling.
 
 The goal is to provide a user-friendly and responsive single-page application where users can manage trucks, drivers, and orders effectively.
 
@@ -56,7 +56,7 @@ The goal is to provide a user-friendly and responsive single-page application wh
 
 ### **Prerequisites**
 
-- Node.js (v16 or higher).
+- Node.js.
 - A Google Cloud Console project with OAuth credentials for Google Login.
 
 ### **Installation**
